@@ -1,0 +1,27 @@
+
+
+
+{% extends "layout.html" %} 
+
+{% block content %}
+
+{{ search }}
+
+    {% for news in news %}
+
+        <article class="media content-section"> 
+            <div class="media-body">
+            <div class="article-metadata">
+                <p class="mr-2">{{ news.source.name }}</p>
+                
+            </div>
+            <h2><a class="article-title" href="{{news.url}}">{{ news.title }}</a></h2>
+            <p class="article-content">{{ news.description}}</p>
+            <img src="{{ news.urlToImage}}" alt="Flowers in Chania">
+
+            </div>
+        </article>
+        
+    {% endfor %}
+
+{% endblock content%}

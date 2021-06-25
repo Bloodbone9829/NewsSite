@@ -1,0 +1,13 @@
+
+
+{% extends "layout.html" %} 
+
+{% block content %}
+
+    {% for news in news %}
+
+        <a href= {{ news.url }}><h1>{{ news.title }} </h1></a>
+    
+    {% endfor %}
+
+{% endblock content%}

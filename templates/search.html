@@ -1,0 +1,28 @@
+
+
+{% extends "layout.html" %} 
+
+{% block content %}
+    
+    <h1 class="text-center">Marco's News</h1>
+
+    <div class="content-section">
+        <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border_bottom mb-4">Search For Fresh News!</legend>
+                <div class="form-group">
+                    {{ form.search.label(class="form-control-label") }}
+                    {{ form.search(class="form-control form-control-lg") }}
+                </div>
+            
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+
+            </div>
+        </form>
+    </div>
+
+{% endblock content%}
+    
